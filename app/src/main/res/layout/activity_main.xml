@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/tv_input"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#efefef"
+        android:gravity="center_vertical|right|bottom"
+        android:textSize="48sp"
+        android:padding="10dp"
+        android:maxLength="12"
+        tools:text="20 + 10"
+        tools:ignore="RtlHardcoded" />
+
+        <LinearLayout
+            android:id="@+id/ll_row1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            >
+            <Button
+                android:id="@+id/tv_7"
+                android:text="7"
+                android:layout_width="0dp"
+                android:layout_marginRight="4dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onDigit" />
+
+            <Button
+                android:id="@+id/tv_8"
+                android:text="8"
+                android:layout_width="0dp"
+                android:layout_marginRight="4dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onDigit"
+                />
+
+            <Button
+                android:id="@+id/tv_9"
+                android:text="9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="4dp"
+                android:onClick="onDigit"
+                />
+
+            <Button
+                android:id="@+id/tv_divide"
+                android:text="/"
+                android:layout_width="0dp"
+                android:layout_marginRight="4dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onOperator"
+                />
+
+    </LinearLayout>
+        <LinearLayout
+        android:id="@+id/ll_row2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        >
+        <Button
+            android:id="@+id/tv_4"
+            android:text="4"
+            android:layout_width="0dp"
+            android:layout_marginRight="4dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit" />
+
+        <Button
+            android:id="@+id/tv_5"
+            android:text="5"
+            android:layout_width="0dp"
+            android:layout_marginRight="4dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            />
+
+        <Button
+            android:id="@+id/tv_6"
+            android:text="6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="4dp"
+            android:onClick="onDigit"
+            />
+
+        <Button
+            android:id="@+id/tv_multiply"
+            android:text="*"
+            android:layout_width="0dp"
+            android:layout_marginRight="4dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onOperator"
+            />
+
+    </LinearLayout>
+        <LinearLayout
+        android:id="@+id/ll_row3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        >
+        <Button
+            android:id="@+id/tv_1"
+            android:text="1"
+            android:layout_width="0dp"
+            android:layout_marginRight="4dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit" />
+
+        <Button
+            android:id="@+id/tv_2"
+            android:text="2"
+            android:layout_width="0dp"
+            android:layout_marginRight="4dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            />
+
+        <Button
+            android:id="@+id/tv_3"
+            android:text="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="4dp"
+            android:onClick="onDigit"
+            />
+
+        <Button
+            android:id="@+id/tv_subtract"
+            android:text="-"
+            android:layout_width="0dp"
+            android:layout_marginRight="4dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:onClick="onOperator"
+            />
+
+    </LinearLayout>
+        <LinearLayout
+        android:id="@+id/ll_row4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        >
+        <Button
+            android:id="@+id/tv_dot"
+            android:text="."
+            android:layout_width="0dp"
+            android:layout_marginRight="4dp"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:onClick="onDecimal" />
+
+        <Button
+            android:id="@+id/tv_0"
+            android:text="0"
+            android:layout_width="0dp"
+            android:layout_marginRight="4dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            />
+
+        <Button
+            android:id="@+id/tv_clear"
+            android:text="CLR"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="4dp"
+            android:onClick="onClear"
+            />
+
+        <Button
+            android:id="@+id/tv_add"
+            android:text="+"
+            android:layout_width="0dp"
+            android:layout_marginRight="4dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onOperator"
+            />
+
+    </LinearLayout>
+        <LinearLayout
+        android:id="@+id/ll_row5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        >
+        <Button
+            android:id="@+id/tv_equal"
+            android:text="="
+            android:layout_width="0dp"
+            android:layout_marginRight="4dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onEqual"
+            android:textSize="23sp"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
